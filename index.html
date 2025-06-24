@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Website | KnowAman</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="KnowAman - Aman’s tech projects, blogs, and academic resources.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Lottie Script -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+</head>
+
+<body>
+  
+
+  <header>
+    <div class="nav-container">
+      <div class="logo-container">
+        <span class="logo-buddy">🤖</span>
+        <span class="logo">KnowAman</span>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <!-- Background Animation -->
+  <div id="bg-animation" style="width:100%; height:10px;"></div>
+  <div id="particles-js"></div>
+
+  <main>
+    <div class="main-layout">
+      <!-- Left: Main Content -->
+      <div class="main-content">
+        <!-- Intro Section -->
+        <section class="welcome-modern">
+          <div class="welcome-content">
+            <div class="welcome-text">
+              <h1><i class="fas fa-user-astronaut"></i> Welcome, Visitor!</h1>
+              <p>
+                I’m crafting web solutions, exploring new tech, and solving real-world problems — one line of code at a
+                time.
+              </p>
+              <ul class="welcome-highlights">
+                <li><i class="fas fa-lightbulb"></i> Passionate Learner</li>
+                <li><i class="fas fa-laptop-code"></i> Full-Stack Explorer</li>
+                <li><i class="fas fa-rocket"></i> Always Building Something Cool</li>
+              </ul>
+            </div>
+            <div class="welcome-illustration">
+              <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Coding" />
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Projects Preview -->
+        <section class="projects-preview">
+          <h2><i class="fas fa-laptop-code"></i> Featured Projects</h2>
+          <div class="project-list">
+            <div class="project-card">
+
+
+              <h3>Portfolio Website</h3>
+              <p>A responsive portfolio site built using HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="project-card">
+              <h3>Student Result App</h3>
+              <p>A Python Flask app to manage and display student results securely.</p>
+            </div>
+            <div class="project-card">
+              <h3>Mini Quiz System</h3>
+              <p>An online quiz system with automatic scoring and ranking features.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right: Notice Board -->
+      <aside class="notice-board">
+        <!-- Notice Card -->
+        <div class="info-card">
+          <h2>📢 Notice Board</h2>
+          <ul>
+            <li>🚀 New project launching soon!</li>
+            <li>📅 Portfolio updated - June 2025</li>
+            <li>✍️ Blog section coming next week</li>
+            <li>📧 Contact form is now live!</li>
+          </ul>
+        </div>
+
+        <!-- Tech News Card -->
+        <div class="info-card">
+          <h2>📰 Tech News</h2>
+          <div id="news-ticker" class="news-ticker">
+            <p>Loading latest news...</p>
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <section class="home-tab-section">
+    <div class="tab-container">
+      <!-- Radio Inputs -->
+      <input type="radio" name="tab" id="tab1" checked hidden>
+      <input type="radio" name="tab" id="tab2" hidden>
+      <input type="radio" name="tab" id="tab3" hidden>
+
+      <!-- Left Column: Tab Buttons and Running Text -->
+      <div class="tab-left">
+        <div class="tab-buttons">
+          <label for="tab1">Overview</label>
+          <label for="tab2">Features</label>
+          <label for="tab3">Updates</label>
+        </div>
+
+        <div class="running-text">
+          <div class="run-text">Empowering your academic success.</div>
+          <div class="run-text">Tools and features to simplify study.</div>
+          <div class="run-text">Stay informed with latest updates.</div>
+        </div>
+      </div>
+
+      <!-- Right Column - Tab Contents -->
+      <div class="tab-contents">
+        <div class="tab-content content1">
+          <h3>Overview</h3>
+          <p>This is a modern web platform designed for student learning and academic resources.</p>
+        </div>
+        <div class="tab-content content2">
+          <h3>Features</h3>
+          <ul>
+            <li>Download past year papers</li>
+            <li>Smart search functionality</li>
+            <li>Admin panel to upload documents</li>
+          </ul>
+        </div>
+        <div class="tab-content content3">
+          <h3>Latest Updates</h3>
+          <p>New question papers for 2023-2024 are now available for BCA and BA courses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div style="text-align: center;">
+    <footer style="
+  display: inline-block;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #9be7ff, #e4f0ff);
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  margin: 2rem auto;
+  text-align: center;
+">
+      © 2025 Aman Kanaujiya. All rights reserved.
+    </footer>
+  </div>
+
+  <button id="scrollToTopBtn" title="Go to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+
+  <script>
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+  <!-- Lottie Animation Script -->
+  <script>
+    lottie.loadAnimation({
+      container: document.getElementById('bg-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets4.lottiefiles.com/packages/lf20_studytech.json'
+    });
+  </script>
+  <script>
+    const apiKey = "14a56a68ad4020f886c93b2ae02357eb";  // 🔑 Your GNews API key
+    const newsAPI = `https://gnews.io/api/v4/top-headlines?lang=en&topic=technology&max=10&token=${apiKey}`;
+    const newsTicker = document.getElementById("news-ticker");
+    let newsItems = [];
+    let currentNewsIndex = 0;
+
+    async function fetchNews() {
+      try {
+        const response = await fetch(newsAPI);
+        const data = await response.json();
+        newsItems = data.articles.map(article => article.title); // Get headlines
+        showNextNews();
+      } catch (error) {
+        newsTicker.innerHTML = "<p>Unable to load tech news.</p>";
+        console.error(error);
+      }
+    }
+
+    function showNextNews() {
+      if (newsItems.length === 0) return;
+      newsTicker.innerHTML = `<p>${newsItems[currentNewsIndex]}</p>`;
+      currentNewsIndex = (currentNewsIndex + 1) % newsItems.length;
+      setTimeout(showNextNews, 10000); // Display each news headline for 10 seconds
+    }
+
+    fetchNews();
+  </script>
+
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60 },
+        size: { value: 3 },
+        color: { value: "#ffffff" },
+        line_linked: { enable: true, distance: 150 },
+        move: { enable: true, speed: 1 }
+      },
+      interactivity: {
+        events: { onhover: { enable: true, mode: "repulse" } }
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>

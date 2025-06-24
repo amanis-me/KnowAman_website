@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - KnowAman</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Featured Badge Styles */
+    .featured-badge {
+      display: none;
+    }
+
+    .projects-page .featured-badge {
+      display: inline-block;
+      background: gold;
+      color: #000;
+      padding: 4px 10px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body class="projects-page">
+
+  <header>
+    <div class="nav-container">
+      <div class="logo-container">
+        <span class="logo-buddy">🤖</span>
+        <span class="logo">KnowAman</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="projects-main">
+      <div class="project-section">
+        <h1>🚀 Explore My Projects</h1>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="python">Python</button>
+          <button class="filter-btn" data-filter="mini">Mini Projects</button>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="project-grid">
+          <div class="project-card" data-category="web">
+            <span class="featured-badge">🌟 Featured</span>
+            <h3>💼 Portfolio Website</h3>
+            <p>A modern responsive personal portfolio built with HTML, CSS, and JavaScript, showcasing skills and
+              projects.</p>
+          </div>
+
+         <a href="projects/weather-app.html" class="project-card block rounded-xl p-4 shadow hover:shadow-lg transition" data-category="javascript">
+  <span class="featured-badge bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">🌟 Featured</span>
+  <h3 class="text-xl font-semibold mt-2">🌀 Weather App</h3>
+  <p class="text-gray-600 mt-1">
+    Real-time weather forecast using OpenWeather API. Shows temperature, humidity, condition, and icons.
+  </p>
+</a>
+
+
+          <div class="project-card" data-category="web">
+            <h3>📝 Task Manager</h3>
+            <p>Simple to-do list manager using vanilla JavaScript with local storage, add/edit/delete tasks, and filter
+              options.</p>
+          </div>
+
+          <div class="project-card" data-category="web">
+            <h3>🔍 Google Clone</h3>
+            <p>A frontend replica of Google's homepage using only HTML and CSS. Clean, responsive, and pixel-perfect.
+            </p>
+          </div>
+
+          <div class="project-card" data-category="mini">
+            <h3>🎯 BMI Calculator</h3>
+            <p>Health-focused mini web app that calculates BMI and provides visual health tips using JS DOM
+              manipulation.</p>
+          </div>
+
+          <div class="project-card" data-category="mini">
+            <h3>📊 Expense Tracker</h3>
+            <p>A finance management tool to track daily income/expenses using JavaScript, Chart.js, and local storage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+ <div style="text-align: center;">
+   <footer style="
+  display: inline-block;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #9be7ff, #e4f0ff);
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  margin: 2rem auto;
+  text-align: center;
+">
+  © 2025 Aman Kanaujiya. All rights reserved.
+</footer>
+</div>
+
+  <script>
+    const buttons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".project-card");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelector(".filter-btn.active").classList.remove("active");
+        button.classList.add("active");
+
+        const category = button.dataset.filter;
+        cards.forEach(card => {
+          const isVisible = category === "all" || card.dataset.category === category;
+          card.style.display = isVisible ? "block" : "none";
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
