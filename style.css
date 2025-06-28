@@ -49,6 +49,8 @@ header {
   animation: float 2s ease-in-out infinite;
 }
 
+
+
 nav {
   flex-grow: 1;
   display: flex;
@@ -1167,7 +1169,187 @@ main {
   z-index: -1;
 }
 
+/* Modern Header Base */
+.modern-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  /* padding: 12px 20px; */
+  transition: background-color 0.3s ease;
+}
 
+.modern-header.transparent {
+  background-color: rgba(255, 255, 255, 0); /* fully transparent */
+}
+
+.modern-header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95); /* semi-white after scroll */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Logo */
+.logo-section .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0070c0;
+  text-decoration: none;
+}
+
+/* Nav Center */
+.nav-section {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-tabs {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-tabs a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  transition: 0.3s ease;
+}
+
+.nav-tabs a:hover {
+  background-color: #d0e8ff;
+  color: #005ea8;
+}
+
+.nav-tabs a.active-tab {
+  background-color: #cde5fb;
+  color: #005ea8;
+}
+
+/* Toggle */
+.toggle-section .toggle-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  color: #0070c0;
+}
+
+.toggle-btn:hover {
+  background: #e4f0ff;
+}
+
+.toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.toggle-slot {
+  font-size: 10px;
+  position: relative;
+  height: 3.5em;
+  width: 7em;
+  border-radius: 10em;
+  background-color: white;
+  transition: background-color 250ms;
+}
+
+.toggle-checkbox:checked ~ .toggle-slot {
+  background-color: #374151;
+}
+
+.toggle-button {
+  transform: translate(0.3em, 0.25em);
+  position: absolute;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  background-color: #ffeccf;
+  box-shadow: inset 0px 0px 0px 0.75em #ffbb52;
+  transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+  background-color: #485367;
+  box-shadow: inset 0px 0px 0px 0.75em white;
+  transform: translate(3.65em, 0.25em);
+}
+
+.sun-icon {
+  position: absolute;
+  height: 6em;
+  width: 6em;
+  color: #ffbb52;
+}
+
+.sun-icon-wrapper {
+  position: absolute;
+  height: 6em;
+  width: 6em;
+  opacity: 1;
+  transform: translate(2em, 2em) rotate(15deg);
+  transform-origin: 50% 50%;
+  transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+  opacity: 0;
+  transform: translate(3em, 2em) rotate(0deg);
+}
+
+.moon-icon {
+  position: absolute;
+  height: 6em;
+  width: 6em;
+  color: white;
+}
+
+.moon-icon-wrapper {
+  position: absolute;
+  height: 6em;
+  width: 6em;
+  opacity: 0;
+  transform: translate(11em, 2em) rotate(0deg);
+  transform-origin: 50% 50%;
+  transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+  opacity: 1;
+  transform: translate(2em, 2em) rotate(-15deg);
+}
+body.dark {
+  background: #121212;
+  color: #f0f0f0;
+}
+body.dark .nav-capsule {
+  background: #1e1e1e;
+}
+body.dark .nav-tabs a {
+  color: #ccc;
+}
+body.dark .nav-tabs a.active-tab {
+  background-color: #333;
+  color: #9be7ff;
+}
 
 
 
